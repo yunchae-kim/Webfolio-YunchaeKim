@@ -1,0 +1,116 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+
+.header__flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__flexbox__item {
+  flex: 1;
+}
+
+.bio {
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+}
+
+.bio__flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio__photo {
+  height: 15rem;
+}
+
+.bio__content {
+  padding: 10px;
+  flex: 1;
+}
+
+.bio__name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bio__title {
+  font-size: 25px;
+}
+
+.bio__education {
+  font-size: 20px;
+  text-align: left;
+}
+
+.bio__education__item {
+  font-size: 15px;
+  text-align: left;
+}
+
+.bio__education__item ul {
+  list-style-type: none;
+}
+
+.bio__description {
+  font-size: 20px;
+  text-align: left;
+}
+
+.projects {
+  padding: 10px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+}
+
+.project__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TagsFilter Styles */
+.tags__filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags__filter button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.tags__filter button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Active Tag Styles */
+.tags__filter button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}

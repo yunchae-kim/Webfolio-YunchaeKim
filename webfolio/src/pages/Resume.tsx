@@ -18,6 +18,27 @@ const projectsData: ProjectItemProps[] = [
     description: 'This is a project 2',
     link: 'https://github.com',
   },
+  {
+    title: 'Project 2',
+    group: 'Group 2',
+    tags: ['React', 'Node', 'Express'],
+    description: 'This is a project 2',
+    link: 'https://github.com',
+  },
+  {
+    title: 'Project 2',
+    group: 'Group 2',
+    tags: ['React', 'Node', 'Express'],
+    description: 'This is a project 2',
+    link: 'https://github.com',
+  },
+  {
+    title: 'Project 2',
+    group: 'Group 2',
+    tags: ['React', 'Node', 'Express'],
+    description: 'This is a project 2',
+    link: 'https://github.com',
+  },
   // Add more projects as needed
 ];
 
@@ -30,12 +51,17 @@ const TagsFilter: FC<TagsFilterProps> = ({ activeTags, setActiveTags }) => {
   const allTags: string[] = ['All', ...new Set(projectsData.flatMap((project) => project.tags))];
 
   const handleTagClick = (tag: string) => {
-    if (activeTags.includes(tag)) {
-      // Remove tag
-      setActiveTags(activeTags.filter((t) => t !== tag));
+    if (tag === 'All') {
+      // If 'All' is clicked, set active tags to just 'All'
+      setActiveTags(['All']);
     } else {
-      // Add tag
-      setActiveTags([...activeTags, tag]);
+      // If any other tag is clicked, remove 'All' and toggle the clicked tag
+      const updatedTags = activeTags.includes(tag)
+        ? activeTags.filter((t) => t !== tag) // Remove the clicked tag
+        : [...activeTags.filter((t) => t !== 'All'), tag]; // Add the clicked tag, remove 'All'
+
+      // If no tags are selected, revert to 'All'
+      setActiveTags(updatedTags.length > 0 ? updatedTags : ['All']);
     }
   };
 
@@ -75,7 +101,16 @@ const Resume: FC = () => {
         <div className="header__flexbox">
           <div className="header__flexbox__item">About</div>
           <div className="header__flexbox__item">Projects</div>
-          <div className="header__flexbox__item">Download Resume</div>
+          <div className="header__flexbox__item">
+            {/* Resume Version Note: Updated on 2023-12-04 */}
+            <a
+              className="header__flexbox__item__resume__button"
+              href={`${process.env.PUBLIC_URL}/resume.pdf`}
+              download="Yunchae_Kim_Resume.pdf"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
       <div className="main">

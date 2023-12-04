@@ -24,7 +24,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ title, group, tags, descripti
         </div>
         <div className="project__item__description">{description}</div>
         <a href={link} className="project__item__link" target="_blank" rel="noopener noreferrer">
-          View Project
+          GitHub Link
         </a>
       </div>
     </div>

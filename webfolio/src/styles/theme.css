@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --primary-color: #6096ba;
+  --secondary-color: #edf7de;
+  --tertiary-color: #40916c;
+  --quaternary-color: #274c77;
+
+  --background-color: #fafafa;
+
+  --primary-font-color: #333333;
+  --secondary-font-color: #fafafa;
+  --tertiary-font-color: #666666;
+
+  --primary-border-color: #9ec1dc;
+
+  /* Fonts */
+  --primary-font: 'Roboto', sans-serif;
+
+  --font-3xl: 1.875rem;
+  --font-2xl: 1.5rem;
+  --font-xl: 1.25rem;
+  --font-lg: 1.125rem;
+  --font-md: 1rem;
+  --font-sm: 0.875rem;
+  --font-xs: 0.75rem;
+
+  /* Spacing */
+  --spacing-unit: 1rem;
+  --spacing-xl: calc(var(--spacing-unit) * 3);
+  --spacing-lg: calc(var(--spacing-unit) * 2);
+  --spacing-md: calc(var(--spacing-unit) * 1.5);
+  --spacing-sm: var(--spacing-unit);
+  --spacing-xs: calc(var(--spacing-unit) / 2);
+
+  /* Z-index variables for common layers */
+  --z-index-background: -1;
+  --z-index-default: 0;
+  --z-index-base: 1;
+  --z-index-popup: 100;
+  --z-index-modal: 200;
+  --z-index-overlay: 300;
+  --z-index-header: 400;
+  --z-index-dropdown: 500;
+  --z-index-tooltip: 600;
+  --z-index-topmost: 1000;
+}

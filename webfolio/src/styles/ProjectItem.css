@@ -1,54 +1,53 @@
-/* Project Item Styles */
+@import 'theme.css';
+
 .project__item {
-  border: 1px solid #e0e0e0;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-border-color);
   border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .project__item__textbox {
-  margin-bottom: 10px;
 }
 
 .project__item__title {
-  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-xl);
   font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
 }
 
 .project__item__group {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-md);
+  color: var(--tertiary-font-color);
 }
 
 .project__item__tag__list {
   display: flex;
+  margin-bottom: var(--spacing-sm);
   flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 10px;
+  gap: var(--spacing-xs);
 }
 
 .project__item__tag {
-  background-color: #007bff;
-  color: white;
-  padding: 3px 8px;
+  padding: 4px 8px;
+  font-size: var(--font-xs);
+  font-weight: bold;
+  color: var(--secondary-font-color);
+  background-color: var(--primary-color);
   border-radius: 4px;
-  font-size: 0.8rem;
 }
 
 .project__item__description {
-  font-size: 0.9rem;
-  color: #444;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-md);
+  color: var(--primary-font-color);
 }
 
 .project__item__link {
-  font-size: 0.9rem;
-  color: #007bff;
+  font-size: var(--font-sm);
+  color: var(--primary-color);
   text-decoration: none;
 }
 

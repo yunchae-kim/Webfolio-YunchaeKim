@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import Resume from './pages/Resume';
 
 function App() {
   return (
-    <div className="App">
-      <Resume />
+    <div className="app">
+      <div className="app__container">
+        <Resume />
+      </div>
     </div>
   );
 }

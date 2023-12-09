@@ -1,0 +1,36 @@
+@import 'theme.css';
+
+.tags__filter__header {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-md);
+  color: var(--primary-font-color);
+}
+
+.tags__filter {
+  display: flex;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags__filter button {
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.tags__filter button:hover {
+  color: var(--secondary-font-color);
+  background-color: var(--quaternary-color);
+}
+
+.tags__filter button.active {
+  color: var(--secondary-font-color);
+  background-color: var(--quaternary-color);
+}

@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Resume from './pages/Resume.js';
+import Resume from './pages/Resume';
 
 function App() {
   return (

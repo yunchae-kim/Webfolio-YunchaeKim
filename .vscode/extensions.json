@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    /* Code Formatting and Productivity */
+    "esbenp.prettier", // Code formatter that enforces consistent code style.
+    "rvest.vs-code-prettier-eslint", // Combines Prettier and ESLint for consistent code formatting and linting.
+    "dsznajder.es7-react-js-snippets", // Offers a collection of useful React and JavaScript snippets for faster development.
+    "stkb.rewrap", // Allows you to rewrap text or code blocks easily for improved text formatting.
+
+    /* Code Organization and Linting */
+    "dbaeumer.vscode-eslint", // Integrates ESLint into VS Code for real-time JavaScript and TypeScript linting.
+    "mike-co.import-sorter", // Automatically organizes and sorts your JavaScript and TypeScript imports.
+    "mrmlnc.vscode-postcss-sorting", // Automatically sorts your PostCSS properties for better CSS organization.
+
+    /* HTML/XML Editing and Tag Management */
+    "formulahendry.auto-rename-tag", // Provides automatic tag renaming in HTML and XML files for increased productivity.
+    "vincaslt.highlight-matching-tag", // Highlights matching HTML/XML tags to improve code readability.
+    "bradgashler.htmltagwrap", // Simplifies wrapping selected code in HTML/XML tags for convenience.
+
+    /* Code Readability and Structure */
+    "oderwat.indent-rainbow", // Enhances code readability by highlighting indentation levels.
+
+    /* VS Code Enhancements */
+    "natqe.reload" // Provides a convenient way to reload the VS Code window for changes to take effect.
+  ]
+}

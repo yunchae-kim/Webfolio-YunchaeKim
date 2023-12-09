@@ -53,14 +53,7 @@
     "template-curly-spacing": ["error", "never"],
     "jsx-quotes": ["warn", "prefer-double"],
     "camelcase": ["warn", { "properties": "always" }],
-    "no-unused-vars": ["warn"],
-
-    "import/order": "off",
-    "import/prefer-default-export": ["warn", { "target": "any" }],
-    "import/no-duplicates": ["error", { "considerQueryString": true }],
-    "simple-import-sort/imports": "error",
-    "import/first": "error",
-    "import/newline-after-import": "error"
+    "no-unused-vars": ["warn"]
   },
   "overrides": [
     // Exceptions for ESLint related files
@@ -71,32 +64,6 @@
       "files": [".eslintrc.{js,cjs}"],
       "parserOptions": {
         "sourceType": "script"
-      }
-    },
-    // Override "simple-import-sort" config
-    {
-      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      "rules": {
-        "simple-import-sort/imports": [
-          "error",
-          {
-            "groups": [
-              // Packages `react` related packages come first.
-              ["^react", "^@?\\w"],
-              // Internal packages.
-              ["^(@|components)(/.*|$)"],
-              // Side effect imports.
-              ["^\\u0000"],
-              // Parent imports. Put `..` last.
-              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-              // Other relative imports. Put same-folder imports and `.` last.
-              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-              // Style imports.
-              ["^.+\\.?(css)$"]
-            ]
-          }
-        ],
-        "simple-import-sort/exports": "error"
       }
     },
     // Exception rules for specific packages

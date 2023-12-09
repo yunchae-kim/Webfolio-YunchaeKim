@@ -1,18 +1,33 @@
 {
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
     "postcss": "css"
   },
 
-  // Javascript formatter: Prettier
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false, // required
+  "editor.formatOnType": false, // required
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Javascript formatter: Prettier-ESLint
   "[javascript]": {
     "editor.formatOnSave": true,
+    "editor.formatOnPaste": false, // required
+    "editor.formatOnType": false, // required
+    "editor.formatOnSaveMode": "file", // required to format on save
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
 
   // Typescript formatter: Prettier-ESLint
   "[typescript]": {
     "editor.formatOnSave": true,
+    "editor.formatOnPaste": false, // required
+    "editor.formatOnType": false, // required
+    "editor.formatOnSaveMode": "file", // required to format on save
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
 

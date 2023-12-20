@@ -40,8 +40,9 @@
 }
 
 .project__item__description {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
   font-size: var(--font-md);
+  line-height: 1.5rem;
   color: var(--primary-font-color);
 }
 

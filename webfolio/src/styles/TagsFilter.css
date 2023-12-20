@@ -3,18 +3,35 @@
 .tags__filter__header {
   margin-bottom: var(--spacing-xs);
   font-size: var(--font-md);
+  font-weight: bold;
   color: var(--primary-font-color);
+}
+
+.tag__category {
+  margin-bottom: var(--spacing-sm);
+}
+
+.tag__category__header {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-md);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.tag__buttons__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
 }
 
 .tags__filter {
   display: flex;
-  margin-bottom: var(--spacing-md);
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
 }
 
 .tags__filter button {
   padding: 5px 10px;
+  font-size: var(--font-sm);
   font-weight: bold;
   cursor: pointer;
   background-color: white;

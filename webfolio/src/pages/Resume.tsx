@@ -8,6 +8,7 @@ import ContactPopup from '../components/ContactPopup';
 import ProjectItem, { ProjectItemProps } from '../components/ProjectItem';
 import TagsFilter from '../components/TagsFilter';
 import Toast from '../components/Toast';
+import bioSections, { BioSection } from '../data/bioSectionData';
 import projectsData from '../data/projectsData';
 import { decodeEmail, encodeEmail } from '../utils/emailObfuscation';
 
@@ -114,54 +115,25 @@ const Resume: FC = () => {
       <div className="page__body">
         <Element name="about"></Element>
         <div className="bio__body divider">
-          <div className="bio__flexbox">
-            <div className="bio__content">
-              <div className="bio__name">Yunchae Kim</div>
-              <div className="bio__section">
-                <div className="bio__section__header">Education</div>
+        <div className="bio__flexbox">
+          <div className="bio__content">
+            <div className="bio__name">Yunchae Kim</div>
+            {bioSections.map((section: BioSection, index: number) => (
+              <div key={index} className="bio__section">
+                <div className="bio__section__header">{section.header}</div>
                 <div className="bio__section__list">
-                  <div className="bio__section__item">
-                    <strong>University of Pennsylvania</strong> - M.S. Computer and Information
-                    Technology (2021 - 2023)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>Korea University</strong> - B.A. Business Administration (2014 - 2020)
-                  </div>
+                  {section.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="bio__section__item">
+                      <strong>{item.title}</strong> - {item.description}
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="bio__section">
-                <div className="bio__section__header">Work Experience</div>
-                <div className="bio__section__list">
-                  <div className="bio__section__item">
-                    <strong>Romano Lab</strong> - Programmer (2023)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>Wharton Risk Center</strong> - Research Assistant (2022 - 2023)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>Storicity</strong> - Frontend Developer / Product Manager (2020 - 2021)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>Boston Consulting Group</strong> - Production & Marketing Support (2019
-                    - 2020)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>Korea University Cognitive Systems Lab</strong> - Research Intern (2018
-                    - 2019)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>The National Assembly of The Republic of Korea</strong> - Intern (2017)
-                  </div>
-                  <div className="bio__section__item">
-                    <strong>Republic of Korea Army</strong> - Interpreter Sergeant / Squad Leader
-                    (2015 - 2017)
-                  </div>
-                </div>
-              </div>
-            </div>
-            <img className="bio__photo" src={profilePic} alt="Profile" />
+            ))}
           </div>
+          <img className="bio__photo" src={profilePic} alt="Profile" />
         </div>
+      </div>
         <Element name="projects"></Element>
         <div id="projects" className="projects__body divider">
           <div className="projects__header">Projects</div>
